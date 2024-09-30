@@ -1,24 +1,26 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <title>Abel Lloria Fortea</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link href="./css/main.css" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 
 <body>
+    <!--Inicio Librerias JS-->
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!--Fin Librerias JS-->
     <header class="p-3 mb-3 border-bottom">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lTQ4BPy3XFtHMjhJekU9A21yGKRmlNtEfA&s"
+                    <img src="https://placehold.co/64x64"
                         height="64px" width="64px">
                 </a>
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -28,226 +30,216 @@
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                    <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">
+                    <input type="text" class="form-control" placeholder="Buscar..." aria-label="Search" id="search-input">
                 </form>
             </div>
         </div>
     </header>
     <main>
         <!--Inicio Header-->
-
-        <div class="container">
-            <br>
-            <h1 class="text-center spacing">Hola 👋, Soy Abel </h1>
-            <br><br>
-            <div class="row align-items-center">
-                <div class="col ">
-                    <img src="https://placehold.co/300x350" class="rounded mx-auto d-block" alt="...">
-                </div>
-                <div class="col">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    ¿Quien soy?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Soy un estudiante de informatica ubicado en Pamplona, Navarra. En estos momentos
-                                    estoy estudiando
-                                    Administracion de Sistemas Informaticos y Redes en Cuatrovientos.
+            <div class="container">
+                <br>
+                <h1 class="text-center spacing">Hola 👋, Soy Abel </h1>
+                <br><br>
+                <div class="row align-items-center">
+                    <div class="col ">
+                        <img src="https://placehold.co/300x350" class="rounded mx-auto d-block" alt="...">
+                    </div>
+                    <div class="col">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        ¿Quien soy?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Soy un estudiante de informatica ubicado en Pamplona, Navarra. En estos momentos
+                                        estoy estudiando
+                                        Administracion de Sistemas Informaticos y Redes en Cuatrovientos.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Mis estudios
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">Administracion de Sistemas Informaticos y Redes</h5>
-                                                <small class="text-body-secondary">2023-2025</small>
-                                            </div>
-                                            <p class="mb-1">Centro Integrado Cuatrovientos</p>
-                                        </a>
-                                        <a href="#" class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">Sistemas Microinformaticos y Redes</h5>
-                                                <small class="text-body-secondary">2021-2023</small>
-                                            </div>
-                                            <p class="mb-1">Salesianos Pamplona</p>
-                                        </a>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Mis estudios
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Administracion de Sistemas Informaticos y Redes</h5>
+                                                    <small class="text-body-secondary">2023-2025</small>
+                                                </div>
+                                                <p class="mb-1">Centro Integrado Cuatrovientos</p>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Sistemas Microinformaticos y Redes</h5>
+                                                    <small class="text-body-secondary">2021-2023</small>
+                                                </div>
+                                                <p class="mb-1">Salesianos Pamplona</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Experiencia Laboral
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">GRUPO AXIUM</h5>
+                                                    <small class="text-body-secondary">2024-2024</small>
+                                                </div>
+                                                <p class="mb-1">Administrador de Sistemas Informaticos</p>
+                                                <small class="text-body-secondary">Trabajo temporal de verano</small>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">INTRAIT SOLUTIONS / FIVERR</h5>
+                                                    <small class="text-body-secondary">2019 - Actualmente</small>
+                                                </div>
+                                                <p class="mb-1">Proveedor de servicios y soporte TI</p>
+                                                <small class="text-body-secondary">Autonomo. Ingles y Español</small>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">GRUPO AXIUM</h5>
+                                                    <small class="text-body-secondary">2023-2023</small>
+                                                </div>
+                                                <p class="mb-1">Practicas vinculadas a grado medio</p>
+                                                <small class="text-body-secondary">Practicas FP DUAL y Administrador de
+                                                    Sistemas Informaticos</small>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Experiencia Laboral
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">GRUPO AXIUM</h5>
-                                                <small class="text-body-secondary">2024-2024</small>
-                                            </div>
-                                            <p class="mb-1">Administrador de Sistemas Informaticos</p>
-                                            <small class="text-body-secondary">Trabajo temporal de verano</small>
-                                        </a>
-                                        <a href="#" class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">INTRAIT SOLUTIONS / FIVERR</h5>
-                                                <small class="text-body-secondary">2019 - Actualmente</small>
-                                            </div>
-                                            <p class="mb-1">Proveedor de servicios y soporte TI</p>
-                                            <small class="text-body-secondary">Autonomo. Ingles y Español</small>
-                                        </a>
-                                        <a href="#" class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">GRUPO AXIUM</h5>
-                                                <small class="text-body-secondary">2023-2023</small>
-                                            </div>
-                                            <p class="mb-1">Practicas vinculadas a grado medio</p>
-                                            <small class="text-body-secondary">Practicas FP DUAL y Administrador de
-                                                Sistemas Informaticos</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-            <br><br><br>
-            <hr class="hr" />
-            <br><br>
-        </div>
-        </div>
-        <!--Fin Header-->
-        <!--Inicio Proyectos-->
-        <div class="container">
-            <h1 class="text-center">Proyectos</h1>
-            <br><br>
-            <div class="row align-items-center">
-                <div class="col ">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">I3 (Intermodular, Intercentro e Interciclo)</h5>
-                            <p class="card-text">Proyecto realizado con el centro Salesianos Pamplona para personas con
-                                problemas de concentracion en el aula</p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#i3-info-modal"> Mas informacion</button>
-                        </div>
-                    </div>
-                    <!--Inicio Modal I3-->
-                    <div class="modal fade" tabindex="-1" id="i3-info-modal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Mas informacion sobre I3 (Intermodular,Intercentro e
-                                        Interciclo)</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Modal body text goes here.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Cerrar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Fin Modal I3-->
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">CubicServers</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#cs-info-modal"> Mas informacion</button>
-                        </div>
-                    </div>
-                    <!--Inicio Modal CS-->
-                    <div class="modal fade" tabindex="-1" id="cs-info-modal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Mas informacion sobre CubicServers</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Modal body text goes here.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Cerrar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Fin Modal CS-->
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">AustralisHosting</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#ah-info-modal"> Mas informacion</button>
-                        </div>
-                    </div>
-                    <!--Inicio Modal AH-->
-                    <div class="modal fade" tabindex="-1" id="ah-info-modal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Mas informacion sobre AustralisHosting</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Modal body text goes here.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Cerrar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Fin Modal AH-->
                 </div>
                 <br><br><br>
                 <hr class="hr" />
                 <br><br>
             </div>
-        </div>
-        <!--Fin Proyectos-->
+            </div>
+            <!--Fin Header-->
+            <!--Inicio Proyectos-->
+            <div class="container">
+                <h1 class="text-center">Proyectos</h1>
+                <br><br>
+                <div class="row align-items-center">
+                    <div class="col ">
+                        <div class="card">
+                            <img src="./img/logo-lc.png" class="card-img-top" alt="LightClass Logo">
+                            <div class="card-body">
+                                <h5 class="card-title">LightClass</h5>
+                                <p class="card-text">Proyecto realizado con el centro Salesianos Pamplona para personas con
+                                    problemas de concentracion</p>
+                                <a class="btn btn-primary" id="i3-modal-btn">Mas Informacion</a>
+                            </div>
+                        </div>
+                        <!--Inicio Modal I3-->
+                        <div class="modal fade" tabindex="-1" id="i3-modal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Mas informacion sobre LightClass</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Modal body text goes here.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Fin Modal I3-->
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="./img/logo-cs.png" class="card-img-top" alt="CubicServers Logo">
+                            <div class="card-body">
+                                <h5 class="card-title">CubicServers</h5>
+                                <p class="card-text">Proveedor de alojamiento de servidores en España y Alemania</p>
+                                    <a class="btn btn-primary" id="cs-modal-btn">Mas Informacion</a>
+                            </div>
+                        </div>
+                        <!--Inicio Modal CS-->
+                        <div class="modal fade" tabindex="-1" id="cs-modal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Mas informacion sobre CubicServers</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Modal body text goes here.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Fin Modal CS-->
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="./img/logo-ah.png" class="card-img-top" alt="AustralisHosting Logo">
+                            <div class="card-body">
+                                <h5 class="card-title">AustralisHosting</h5>
+                                <p class="card-text">Proveedor de alojamiento Suizo, trabajaba como SysAdmin</p>
+                                    <a class="btn btn-primary" id="ah-modal-btn">Mas Informacion</a>
+                            </div>
+                        </div>
+                        <!--Inicio Modal AH-->
+                        <div class="modal fade" tabindex="-1" id="ah-modal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Mas informacion sobre AustralisHosting</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Modal body text goes here.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Fin Modal AH-->
+                    </div>
+                </div>
+            </div>
+             <!--Fin Proyectos-->
 
 
     </main>
@@ -258,14 +250,6 @@
             </div>
         </footer>
     </div>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
