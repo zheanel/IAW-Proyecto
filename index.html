@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -15,7 +16,6 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
     <!--Fin Librerias JS-->
     <header class="p-3 mb-3 border-bottom sticky-top bg-dark">
         <div class="container">
@@ -24,9 +24,9 @@
                     <img src="https://placehold.co/64x64" height="64px" width="64px">
                 </a>
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 link-body-emphasis">Inicio</a></li>
-                    <li><a id="btn-proyectos" class="nav-link px-2 link-body-emphasis">Proyectos</a></li>
-                    <li><a id="btn-contacto" class="nav-link px-2 link-body-emphasis">Contacto</a></li>
+                    <li><a href="#" class="nav-link px-2 link-body-emphasis"><i class="bi bi-house"></i> Inicio</a></li>
+                    <li><a id="btn-proyectos" class="nav-link px-2 link-body-emphasis"><i class="bi bi-kanban"></i> Proyectos</a></li>
+                    <li><a id="btn-contacto" class="nav-link px-2 link-body-emphasis"><i class="bi bi-person-lines-fill"></i> Contacto</a></li>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -52,7 +52,7 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    ¿Quien soy?
+                                    <i class="bi bi-file-person"></i>  ¿Quien soy?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show"
@@ -68,7 +68,7 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Mis estudios
+                                    <i class="bi bi-book"></i>  Mis estudios
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse"
@@ -97,7 +97,7 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Experiencia Laboral
+                                    <i class="bi bi-person-workspace"></i>  Experiencia Laboral
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse"
@@ -154,7 +154,7 @@
                             <h5 class="card-title">LightClass</h5>
                             <p class="card-text">Proyecto realizado con el centro Salesianos Pamplona para personas con
                                 problemas de concentracion</p>
-                            <a class="btn btn-primary" id="i3-modal-btn">Mas Informacion</a>
+                            <a class="btn btn-primary" id="i3-modal-btn"><i class="bi bi-info-circle"></i> Mas Informacion</a>
                         </div>
                     </div>
                     <!--Inicio Modal I3-->
@@ -168,12 +168,19 @@
                                 </div>
                                 <div class="modal-body">
                                     <p>Video Informativo sobre el proyecto I3:
-                                    <iframe width="100%" height="350px" src="https://www.youtube.com/embed/2FSpEGktXC8?si=OIqThjpbqpZoDzuF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    ¿Que es LightClass?<br><br>
-                                    LightClass es un dispositivo para el alumnado de necesidades especiales, el cual ha sido desarrollado por Cuatrovientos y Salesianos Pamplona dentro del proyecto I3.
-                                    Este ofrece control del tiempo, autogestion, solicitar ayuda al profesor y facilitar la dinamica del aula mediante turnos de palabra visuales.
-                                </p>
-                            </div>
+                                        <iframe width="100%" height="350px"
+                                            src="https://www.youtube.com/embed/2FSpEGktXC8?si=OIqThjpbqpZoDzuF"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        ¿Que es LightClass?<br><br>
+                                        LightClass es un dispositivo para el alumnado de necesidades especiales, el cual
+                                        ha sido desarrollado por Cuatrovientos y Salesianos Pamplona dentro del proyecto
+                                        I3.
+                                        Este ofrece control del tiempo, autogestion, solicitar ayuda al profesor y
+                                        facilitar la dinamica del aula mediante turnos de palabra visuales.
+                                    </p>
+                                </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cerrar</button>
@@ -189,7 +196,7 @@
                         <div class="card-body">
                             <h5 class="card-title">CubicServers</h5>
                             <p class="card-text">Proveedor de alojamiento de servidores en España y Alemania</p>
-                            <a class="btn btn-primary" id="cs-modal-btn">Mas Informacion</a>
+                            <a class="btn btn-primary" id="cs-modal-btn"><i class="bi bi-info-circle"></i> Mas Informacion</a>
                         </div>
                     </div>
                     <!--Inicio Modal CS-->
@@ -202,9 +209,15 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Este proyecto nacio en el año 2021, a mediados de diciembre. Tras implementar la idea y desarrollarla, no tuvo exito debido a la gran competencia que hay y la inseguridad que los usuarios tenian en una plataforma tan reciente.<br><br>
-                                       A los 3-6 meses, debido a la cantidad de perdidas generadas, se decidio clausurar el proyecto completamente para el publico.<br><br> En estos momentos solo esta disponible para personas cercanas y amigos que necesitan un sitio donde
-                                       realizar pruebas de servicios (enfocado primariamente a servidores de Minecraft JAVA y bases de datos MySQL, MongoDB y Redis)
+                                    <p>Este proyecto nacio en el año 2021, a mediados de diciembre. Tras implementar la
+                                        idea y desarrollarla, no tuvo exito debido a la gran competencia que hay y la
+                                        inseguridad que los usuarios tenian en una plataforma tan reciente.<br><br>
+                                        A los 3-6 meses, debido a la cantidad de perdidas generadas, se decidio
+                                        clausurar el proyecto completamente para el publico.<br><br> En estos momentos
+                                        solo esta disponible para personas cercanas y amigos que necesitan un sitio
+                                        donde
+                                        realizar pruebas de servicios (enfocado primariamente a servidores de Minecraft
+                                        JAVA y bases de datos MySQL, MongoDB y Redis)
                                     </p>
                                 </div>
                                 <div class="modal-footer">
@@ -222,7 +235,7 @@
                         <div class="card-body">
                             <h5 class="card-title">AustralisHosting</h5>
                             <p class="card-text">Proveedor de alojamiento Suizo, administrador de sistemas</p>
-                            <a class="btn btn-primary" id="ah-modal-btn">Mas Informacion</a>
+                            <a class="btn btn-primary" id="ah-modal-btn"><i class="bi bi-info-circle"></i> Mas Informacion</a>
                         </div>
                     </div>
                     <!--Inicio Modal AH-->
@@ -235,11 +248,20 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Participe en este proyecto debido a que un amigo que residia en Suiza decidio intentar adentrarse en el mundo del servicio de alojamiento, anteriormente se realizaron diversos intentos los cuales no surguieron efecto.<br><br>
-                                       Yo era la persona encargada de los Sistemas, es decir, que todo funcionara bien y que si algo decidia explotar, que lo arreglara lo antes posible.<br><br>
-                                       Despues de un tiempo de actividad, no era sostenible mantener el servicio que estabamos dando, por lo que se decidio innovar y probar con otro tipo de servicio, el cual no dio el resultado esperado<br><br>
-                                       El CEO y CTO de la empresa decidieron sin previo aviso unirse a otra empresa para continuar en algo mas estable y que tuviera futuro, los clientes que querian trasladar el servicio, podian hacerlo sin problem, el cual ya tenia un buen servicio.<br><br>
-                                       En este caso, decidi no unirme a esa empresa, debido a que no tendria sentido alguno.
+                                    <p>Participe en este proyecto debido a que un amigo que residia en Suiza decidio
+                                        intentar adentrarse en el mundo del servicio de alojamiento, anteriormente se
+                                        realizaron diversos intentos los cuales no surguieron efecto.<br><br>
+                                        Yo era la persona encargada de los Sistemas, es decir, que todo funcionara bien
+                                        y que si algo decidia explotar, que lo arreglara lo antes posible.<br><br>
+                                        Despues de un tiempo de actividad, no era sostenible mantener el servicio que
+                                        estabamos dando, por lo que se decidio innovar y probar con otro tipo de
+                                        servicio, el cual no dio el resultado esperado<br><br>
+                                        El CEO y CTO de la empresa decidieron sin previo aviso unirse a otra empresa
+                                        para continuar en algo mas estable y que tuviera futuro, los clientes que
+                                        querian trasladar el servicio, podian hacerlo sin problem, el cual ya tenia un
+                                        buen servicio.<br><br>
+                                        En este caso, decidi no unirme a esa empresa, debido a que no tendria sentido
+                                        alguno.
                                     </p>
                                 </div>
                                 <div class="modal-footer">
@@ -263,35 +285,33 @@
             <br><br>
             <div class="row align-items-center">
                 <div class="col ">
-                    <form id="contactoWeb">
-                        <div data-mdb-input-init class="form-outline mb-4">
-                            <input type="text" id="name" class="form-control" />
-                            <label class="form-label" for="name">Nombre</label>
+                    <form class="was-validated" id="formValidation">
+                        <div class="mb-3">
+                            <label for="validationCustom01" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="validationCustom01" required>
+                            <div class="valid-feedback">El valor introducido es válido</div>
                         </div>
-
-                        <div data-mdb-input-init class="form-outline mb-4">
-                            <input type="email" id="email" class="form-control" />
-                            <label class="form-label" for="email">Correo Electronico</label>
+                        <div class="mb-3">
+                            <label for="validationCustom02" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="validationCustom02" required>
+                            <div class="valid-feedback">Correo Válido :)</div>
                         </div>
-
-                        <div data-mdb-input-init class="form-outline mb-4">
-                            <textarea class="form-control" id="message" rows="4"></textarea>
-                            <label class="form-label" for="message">Mensaje</label>
+                    
+                        <div class="mb-3">
+                            <label for="validationTextarea" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="validationTextarea" placeholder="Es necesario que introduzcas tu mensaje" required></textarea>
+                            <div class="valid-feedback">Gracias por tu comentario</div>
+                        </div><br>
+                    
+                        <div class="mb-3">
+                            <button class="btn btn-primary" id="submitBtn" disabled>Enviar Formulario</button>
                         </div>
-
-                        <div class="form-check d-flex justify-content-center mb-4">
-                            <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
-                            <label class="form-check-label" for="form4Example4">
-                                Enviar copia de este correo
-                            </label>
-                        </div>
-
-                        <input type="submit" value="Enviar">
                     </form>
-                </div>
             </div>
         </div>
+        </div>
         <!--Fin FormContacto-->
+        
     </main>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

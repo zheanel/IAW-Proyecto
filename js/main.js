@@ -12,22 +12,6 @@ jQuery(document).ready(function () {
     $("#ah-modal").modal("show");
   });
 
-  //Validacion formulario
-  $(document).ready(function() {
-    $("#contactoWeb").validate({
-        rules: {
-            name: { required: true, minlength: 8 },
-            email: { required: true, email: true },
-            message: { minlength: 10 },
-        },
-        messages: {
-            name: "Este campo es necesario.",
-            email: "Hey! Si no pones tu correo no sabré cómo responderte.",
-            message: "Vaya, ¿te has quedado sin palabras?",
-        }
-    });
-});
-
 //Oculto los elementos al acceder a la web
 
 $("#proyectos").hide();
@@ -47,4 +31,26 @@ $("#btn-contacto").click(function () {
   });
 });
 
+});
+
+//Verifica datos del formulario
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('formValidation');
+  const submitBtn = document.getElementById('submitBtn');
+
+  const inputs = form.querySelectorAll('input[required], textarea[required]');
+
+  function checkFormValidity() {
+      let allValid = true;
+      inputs.forEach(input => {
+          if (!input.value || !input.checkValidity()) {
+              allValid = false;
+          }
+      });
+      submitBtn.disabled = !allValid;
+  }
+
+  inputs.forEach(input => {
+      input.addEventListener('input', checkFormValidity);
+  });
 });
