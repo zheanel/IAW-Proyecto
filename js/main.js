@@ -12,6 +12,10 @@ jQuery(document).ready(function () {
     $("#ah-modal").modal("show");
   });
 
+  $("#enviarCorreo").click(function () {
+    $("#send-modal").modal("show");
+  });
+
 //Oculto los elementos al acceder a la web
 
 $("#proyectos").hide();
@@ -33,10 +37,16 @@ $("#btn-contacto").click(function () {
 
 });
 
+
+setTimeout(function() {
+  $('#send-modal').modal('hide');
+}, 2000);
+
+
 //Verifica datos del formulario
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('formValidation');
-  const submitBtn = document.getElementById('submitBtn');
+  const submitBtn = document.getElementById('enviarCorreo');
 
   const inputs = form.querySelectorAll('input[required], textarea[required]');
 
@@ -54,3 +64,4 @@ document.addEventListener('DOMContentLoaded', function() {
       input.addEventListener('input', checkFormValidity);
   });
 });
+

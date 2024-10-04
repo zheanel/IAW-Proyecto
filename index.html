@@ -304,13 +304,30 @@
                         </div><br>
                     
                         <div class="mb-3">
-                            <button class="btn btn-primary" id="submitBtn" disabled>Enviar Formulario</button>
+                            <button type="button" class="btn btn-primary" id="enviarCorreo" disabled>Enviar Formulario</button>
+                            <button type="reset" class="btn btn-primary">Limpiar</button>
                         </div>
                     </form>
             </div>
         </div>
         </div>
         <!--Fin FormContacto-->
+
+                   <!--Inicio Modal Correo-->
+                   <div class="modal fade" tabindex="-1" id="send-modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3>
+                                    Se ha enviado con exito
+                                </h3>
+                                <p>Se enviara una respuesta lo antes posible a la direccion de correo enviada</p>
+                                <img class="rounded mx-auto d-block" src="./img/check2.gif" height="128px" width="128px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Modal Correo-->
         
     </main>
     <div class="container">
