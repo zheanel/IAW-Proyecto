@@ -12,8 +12,14 @@ jQuery(document).ready(function () {
     $("#ah-modal").modal("show");
   });
 
+  //Muestra modal de confirmacion, se cierra a los 5 segundos y limpia el formulario
   $("#enviarCorreo").click(function () {
     $("#send-modal").modal("show");
+    setTimeout(function() {
+      $('#send-modal').modal('hide');
+      $('#contactoFormulario')[0].reset();
+    }, 5000);
+    
   });
 
 //Oculto los elementos al acceder a la web
@@ -21,7 +27,7 @@ jQuery(document).ready(function () {
 $("#proyectos").hide();
 $("#contacto").hide();
 
-//Muestro los elementos cuando presiono el boton del navbar
+//Muestro los elementos cuando presiono el link de la barra de navegación
 
 $("#btn-proyectos").click(function () {
   $("#proyectos").toggle(1000, function() {
@@ -37,15 +43,9 @@ $("#btn-contacto").click(function () {
 
 });
 
-
-setTimeout(function() {
-  $('#send-modal').modal('hide');
-}, 2000);
-
-
 //Verifica datos del formulario
 document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('formValidation');
+  const form = document.getElementById('contactoFormulario');
   const submitBtn = document.getElementById('enviarCorreo');
 
   const inputs = form.querySelectorAll('input[required], textarea[required]');
