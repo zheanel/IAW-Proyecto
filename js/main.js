@@ -64,4 +64,3 @@ document.addEventListener('DOMContentLoaded', function() {
       input.addEventListener('input', checkFormValidity);
   });
 });
-
