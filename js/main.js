@@ -18,7 +18,7 @@ jQuery(document).ready(function () {
     setTimeout(function() {
       $('#send-modal').modal('hide');
       $('#contactoFormulario')[0].reset();
-    }, 5000);
+    }, 4000);
     
   });
 
