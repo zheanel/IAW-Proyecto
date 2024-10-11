@@ -5,9 +5,7 @@ Esta pagina web contiene informacion sobre quien soy, los proyectos que he ido r
 
 ## Tecnologias utilizadas
 
-<img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" height="64px" />
-<img src="https://user-images.githubusercontent.com/25181517/183898054-b3d693d4-dafb-4808-a509-bab54cf5de34.png" height="64px" />
-<img src="https://enetic.es/web/wp-content/uploads/sites/7/2020/07/jQuery-logo.png" height="64px" />
+<p align="left"><img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" height="64px" /><img src="https://user-images.githubusercontent.com/25181517/183898054-b3d693d4-dafb-4808-a509-bab54cf5de34.png" height="64px" /><img src="https://e7.pngegg.com/pngimages/647/56/png-clipart-logo-brand-jquery-mobile-jqlogo-design-white-text.png" height="64px" /></p>
 
 ## Entorno de desarrollo
 
@@ -30,4 +28,4 @@ Para poder ver el contenido de la pagina web, podemos acceder desde el siguiente
 ## Autores
 
 Este proyecto ha sido realizado por:
-- [@zheanel](https://www.github.com/octokatherine) - Abel Lloria Fortea 2ºASIR
+- [@zheanel](https://www.github.com/zheanel) - Abel Lloria Fortea 2ºASIR
