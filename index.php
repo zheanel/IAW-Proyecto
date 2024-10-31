@@ -1,4 +1,15 @@
-<!doctype html>
+<?php
+$servername = "localhost";
+$username = "";
+$password = "";
+$dbname = "";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+$sql = " SELECT * FROM proyectos";
+$result = $conn->query($sql);
+$conn->close();
+?>
+
 <html lang="es" data-bs-theme="dark">
 
 <head>
@@ -22,8 +33,10 @@
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="#" class="nav-link px-2 link-body-emphasis"><i class="bi bi-house"></i> Inicio</a></li>
-                    <li><a id="btn-proyectos" class="nav-link px-2 link-body-emphasis"><i class="bi bi-kanban"></i> Proyectos</a></li>
-                    <li><a id="btn-contacto" class="nav-link px-2 link-body-emphasis"><i class="bi bi-person-lines-fill"></i> Contacto</a></li>
+                    <li><a id="btn-proyectos" class="nav-link px-2 link-body-emphasis"><i class="bi bi-kanban"></i>
+                            Proyectos</a></li>
+                    <li><a id="btn-contacto" class="nav-link px-2 link-body-emphasis"><i
+                                class="bi bi-person-lines-fill"></i> Contacto</a></li>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -41,7 +54,8 @@
             <br><br>
             <div class="row align-items-center">
                 <div class="col ">
-                    <img src="https://placehold.co/300x350" height="350px" width="300px" class="rounded mx-auto d-block" alt="...">
+                    <img src="https://placehold.co/300x350" height="350px" width="300px" class="rounded mx-auto d-block"
+                        alt="...">
                 </div>
                 <div class="col">
                     <div class="accordion" id="accordionExample">
@@ -49,7 +63,7 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="bi bi-file-person"></i>  ¿Quien soy?
+                                    <i class="bi bi-file-person"></i> ¿Quien soy?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show"
@@ -65,7 +79,7 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <i class="bi bi-book"></i>  Mis estudios
+                                    <i class="bi bi-book"></i> Mis estudios
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse"
@@ -94,7 +108,7 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <i class="bi bi-person-workspace"></i>  Experiencia Laboral
+                                    <i class="bi bi-person-workspace"></i> Experiencia Laboral
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse"
@@ -143,131 +157,47 @@
             <br><br>
             <h1 class="text-center">Proyectos</h1>
             <br><br>
-            <div class="row align-items-center">
-                <div class="col ">
+            <div class="row align-items-center row-cols-4">
+                <?php
+                    while ($rows = $result->fetch_assoc()) {
+                        ?>
+                <!--Agrego los cards de proyectos-->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card">
-                        <img src="./img/logo-lc.png" class="card-img-top" alt="LightClass Logo">
+                        <img src="proyectos\<?php echo $rows['image']; ?>" height="116" width="304" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title">LightClass</h5>
-                            <p class="card-text">Proyecto realizado con el centro Salesianos Pamplona para personas con
-                                problemas de concentración</p>
-                            <a class="btn btn-primary" id="i3-modal-btn"><i class="bi bi-info-circle"></i> Mas Información</a>
+                            <h5 class="card-title"><?php echo $rows['title']; ?></h5>
+                            <p class="card-text"><?php echo $rows['description']; ?></p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" tabindex="-1"
+                                data-bs-target="#<?php echo $rows['title']; ?>">
+                                <i class="bi bi-info-circle"></i>Mas Información
+                            </button>
+
                         </div>
                     </div>
-                    <!--Inicio Modal I3-->
-                    <div class="modal fade" tabindex="-1" id="i3-modal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">LightClass</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Video Informativo sobre el proyecto I3:
-                                        <iframe width="100%" height="350px"
-                                            src="https://www.youtube.com/embed/2FSpEGktXC8?si=OIqThjpbqpZoDzuF"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        ¿Que es LightClass?<br><br>
-                                        LightClass es un dispositivo para el alumnado de necesidades especiales, el cual
-                                        ha sido desarrollado por Cuatrovientos y Salesianos Pamplona dentro del proyecto
-                                        I3.
-                                        Este ofrece control del tiempo, autogestión, solicitar ayuda al profesor y
-                                        facilitar la dinámica del aula mediante turnos de palabra visuales.
-                                    </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Cerrar</button>
-                                </div>
+                </div>
+                    <!--Agrego los cards de informacion-->
+                <div class="modal fade" id="<?php echo $rows['title']; ?>"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5"><?php echo $rows['title']; ?></h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                             <?php echo $rows['long_description']; ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
-                    <!--Fin Modal I3-->
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="./img/logo-cs.png" class="card-img-top" alt="CubicServers Logo">
-                        <div class="card-body">
-                            <h5 class="card-title">CubicServers</h5>
-                            <p class="card-text">Proveedor de alojamiento de servidores en España y Alemania</p>
-                            <a class="btn btn-primary" id="cs-modal-btn"><i class="bi bi-info-circle"></i> Mas Información</a>
-                        </div>
-                    </div>
-                    <!--Inicio Modal CS-->
-                    <div class="modal fade" tabindex="-1" id="cs-modal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">CubicServers</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Este proyecto nació en el año 2021, a mediados de diciembre. Tras implementar la
-                                        idea y desarrollarla, no tuvo éxito debido a la gran competencia que hay y la
-                                        inseguridad que los usuarios tenían en una plataforma tan reciente.<br><br>
-                                        A los 3-6 meses, debido a la cantidad de perdidas generadas, se decidió
-                                        clausurar el proyecto completamente para el publico.<br><br> En estos momentos
-                                        solo esta disponible para personas cercanas y amigos que necesitan un sitio
-                                        donde
-                                        realizar pruebas de servicios (enfocado primariamente a servidores de Minecraft
-                                        JAVA y bases de datos MySQL, MongoDB y Redis)
-                                    </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Cerrar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Fin Modal CS-->
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="./img/logo-ah.png" class="card-img-top" alt="AustralisHosting Logo">
-                        <div class="card-body">
-                            <h5 class="card-title">AustralisHosting</h5>
-                            <p class="card-text">Proveedor de alojamiento Suizo, administrador de sistemas</p>
-                            <a class="btn btn-primary" id="ah-modal-btn"><i class="bi bi-info-circle"></i> Mas Información</a>
-                        </div>
-                    </div>
-                    <!--Inicio Modal AH-->
-                    <div class="modal fade" tabindex="-1" id="ah-modal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">AustralisHosting</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Participe en este proyecto debido a que un amigo que residía en Suiza decidió
-                                        intentar adentrarse en el mundo del servicio de alojamiento, anteriormente se
-                                        realizaron diversos intentos los cuales no surgieron efecto.<br><br>
-                                        Yo era la persona encargada de los Sistemas, es decir, que todo funcionara bien
-                                        y que si algo decidía explotar, que lo arreglara lo antes posible.<br><br>
-                                        Después de un tiempo de actividad, no era sostenible mantener el servicio que
-                                        estábamos dando, por lo que se decidió innovar y probar con otro tipo de
-                                        servicio, el cual no dio el resultado esperado<br><br>
-                                        El CEO y CTO de la empresa decidieron sin previo aviso unirse a otra empresa
-                                        para continuar en algo mas estable y que tuviera futuro.<br><br>
-                                        En este caso, decidí no unirme a esa empresa, debido a que no tendría sentido
-                                        alguno.
-                                    </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Cerrar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Fin Modal AH-->
-                </div>
+                <?php
+                    }
+                    ?>
             </div>
         </div>
         <!--Fin Proyectos-->
@@ -291,39 +221,42 @@
                             <input type="email" class="form-control" id="validationCustom02" required>
                             <div class="valid-feedback">Correo Válido :)</div>
                         </div>
-                    
+
                         <div class="mb-3">
                             <label for="validationTextarea" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="validationTextarea" placeholder="Es necesario que introduzcas tu mensaje" required></textarea>
+                            <textarea class="form-control" id="validationTextarea"
+                                placeholder="Es necesario que introduzcas tu mensaje" required></textarea>
                             <div class="valid-feedback">Gracias por tu comentario</div>
                         </div><br>
-                    
+
                         <div class="mb-3">
-                            <button type="button" class="btn btn-primary" id="enviarCorreo" disabled>Enviar Formulario</button>
+                            <button type="button" class="btn btn-primary" id="enviarCorreo" disabled>Enviar
+                                Formulario</button>
                             <button type="reset" class="btn btn-primary">Limpiar</button>
                         </div>
                     </form>
+                </div>
             </div>
-        </div>
         </div>
         <!--Fin FormContacto-->
 
-                   <!--Inicio Modal Correo-->
-                   <div class="modal fade" tabindex="-1" id="send-modal">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body  border rounded" style="background-color: #fbfaf7;">
-                                <h3 class="text-dark text-center">
-                                    ¡Enviado con éxito!
-                                </h3>
-                                <p class="text-dark">Recibirás una respuesta lo antes posible a la dirección de correo indicada</p>
-                                <img class="rounded mx-auto d-block" src="./img/check.gif" height="128px" width="128px">
-                            </div>
-                        </div>
+        <!--Inicio Modal Correo-->
+        <div class="modal fade" tabindex="-1" id="send-modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body  border rounded" style="background-color: #fbfaf7;">
+                        <h3 class="text-dark text-center">
+                            ¡Enviado con éxito!
+                        </h3>
+                        <p class="text-dark">Recibirás una respuesta lo antes posible a la dirección de correo indicada
+                        </p>
+                        <img class="rounded mx-auto d-block" src="./img/check.gif" height="128px" width="128px">
                     </div>
                 </div>
-                <!--Fin Modal Correo-->
-        
+            </div>
+        </div>
+        <!--Fin Modal Correo-->
+
     </main>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
