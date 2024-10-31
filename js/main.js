@@ -30,13 +30,13 @@ $("#contacto").hide();
 //Muestro los elementos cuando presiono el link de la barra de navegación
 
 $("#btn-proyectos").click(function () {
-  $("#proyectos").toggle(1000, function() {
+  $("#proyectos").toggle(500, function() {
       document.getElementById("proyectos").scrollIntoView();
   });
 });
 
 $("#btn-contacto").click(function () {
-  $("#contacto").toggle(1000, function() {
+  $("#contacto").toggle(500, function() {
       document.getElementById("contacto").scrollIntoView();
   });
 });

@@ -31,7 +31,7 @@ $conn->close();
     <header class="p-3 mb-3 border-bottom sticky-top bg-dark">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="cursor: pointer;">
                     <li><a href="#" class="nav-link px-2 link-body-emphasis"><i class="bi bi-house"></i> Inicio</a></li>
                     <li><a id="btn-proyectos" class="nav-link px-2 link-body-emphasis"><i class="bi bi-kanban"></i>
                             Proyectos</a></li>
